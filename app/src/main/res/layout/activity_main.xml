@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Fundal personalizat -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/runphoto"
+        android:scaleType="centerCrop" />
+
+    <!-- Ceasul, centrat pe axa orizontală și sus -->
+    <TextClock
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:format12Hour="hh:mm a" />
+
+
+    <!-- CardView pentru textul principal -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#55000000 ">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Running App"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Session"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/previousSessionsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Check Session"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+<!--        android:id="@+id/weatherTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_below="@id/clock"-->
+<!--        android:layout_marginTop="16dp"/>-->
+<!--    &lt;!&ndash; Adaugă acest cod sub TextView-ul pentru vreme sau în locul acestuia, după preferințele tale &ndash;&gt;-->
+
+
+
+</RelativeLayout>
